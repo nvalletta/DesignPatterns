@@ -6,6 +6,8 @@
 package designpatterns.observer;
 
 import designpatterns.PatternDemonstration;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -13,19 +15,24 @@ import designpatterns.PatternDemonstration;
  */
 public class ObserverPattern implements PatternDemonstration {
     
-    private Human human;
+    private List<Human> humans;
     private Cat cat;
     
     @Override
     public void demonstrate() {
         this.initialize();
-        human.watch(cat);
+        for (Human human : humans) {
+            human.watch(cat);
+        }
         cat.beACat();
     }
     
     @Override
     public void initialize() {
-        human = new Human("Nora");
+        humans = new ArrayList<>();
+        humans.add(new Human("Nora"));
+        humans.add(new Human("Brett"));
+        humans.add(new SuperHuman("Sterling Archer"));
         cat = new Cat("Kiki");
     }
     
