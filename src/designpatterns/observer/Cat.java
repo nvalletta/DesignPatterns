@@ -6,7 +6,8 @@
 package designpatterns.observer;
 
 import java.util.Observable;
-import java.util.logging.Handler;
+import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 /**
  *
@@ -15,14 +16,7 @@ import java.util.logging.Handler;
 public class Cat extends Observable {
     
     private String name = "Cat";
-    //private Handler catHandler = new Handler();
-    private final Runnable iDoWhatIWantRunnable = new Runnable() {
-        @Override
-        public void run() {
-            throw new UnsupportedOperationException("Not supported yet.");
-        }
-    };
-    
+    final ScheduledThreadPoolExecutor executor = new ScheduledThreadPoolExecutor(1);
     
     public Cat() { }
     
@@ -30,14 +24,14 @@ public class Cat extends Observable {
         this.name = name;
     }
     
-    public void startFilmingCat() {
-        
+    public void beACat() {
+        executor.schedule(() -> doSomethingFunny(), (int)(Math.random() * 10), TimeUnit.SECONDS);
     }
     
     private void doSomethingFunny() {
-        System.out.println(name + " does a flip!");
+        System.out.println(name + " flips out!");
+        this.setChanged();
         this.notifyObservers();
     }
-    
     
 }
