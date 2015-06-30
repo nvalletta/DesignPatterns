@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package designpatterns.observer;
+package designpatterns.behavioral.observer;
 
 import designpatterns.PatternDemonstration;
 import java.util.ArrayList;

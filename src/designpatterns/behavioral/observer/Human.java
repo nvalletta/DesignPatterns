@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package designpatterns.observer;
+package designpatterns.behavioral.observer;
 
 import java.util.Observable;
 import java.util.Observer;
@@ -12,19 +12,23 @@ import java.util.Observer;
  *
  * @author nora-valletta
  */
-public class SuperHuman extends Human implements Observer {
+public class Human implements Observer {
+
+    private String name = "Human";
     
-    public String name = "SuperHuman";
+    public Human () { }
     
-    public SuperHuman() { }
-    
-    public SuperHuman(String name) {
+    public Human (String name) {
         this.name = name;
+    }
+    
+    public void watch(Observable thingToWatch) {
+        thingToWatch.addObserver(this);
     }
     
     @Override
     public void update(Observable o, Object arg) {
-        System.out.println(name + " says, \"...\"");
+        System.out.println(name + " says, \"LOL!\"");
         o.deleteObserver(this);
     }
     

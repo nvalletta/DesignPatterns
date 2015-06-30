@@ -5,8 +5,8 @@
  */
 package designpatterns;
 
-import designpatterns.observer.ObserverPattern;
-import designpatterns.memento.MementoPattern;
+import designpatterns.behavioral.observer.ObserverPattern;
+import designpatterns.behavioral.memento.MementoPattern;
 
 /**
  *
