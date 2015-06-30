@@ -5,20 +5,19 @@
  */
 package designpatterns;
 
-import designpatterns.observer.ObserverPattern;
+import designpatterns.*;
 
 /**
  *
  * @author nora-valletta
  */
-public class DesignPatterns {
+public class DesignPatternsHub {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        ObserverPattern o = new ObserverPattern();
-        o.demonstrate();
+        
     }
     
 }

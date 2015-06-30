@@ -12,7 +12,7 @@ import java.util.List;
 /**
  *
  * @author nora-valletta
- */
+ */;
 public class ObserverPattern implements PatternDemonstration {
     
     private List<Human> humans;
@@ -21,9 +21,9 @@ public class ObserverPattern implements PatternDemonstration {
     @Override
     public void demonstrate() {
         this.initialize();
-        for (Human human : humans) {
+        humans.stream().forEach((human) -> {
             human.watch(cat);
-        }
+        });
         cat.beACat();
     }
     
