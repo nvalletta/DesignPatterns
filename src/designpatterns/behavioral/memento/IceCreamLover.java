@@ -15,6 +15,11 @@ public final class IceCreamLover {
     private IceCreamOrder iceCreamOrder;
     private final IceCreamMemento iceCreamMemento;
     
+    public IceCreamLover() {
+        this.iceCreamOrder = new IceCreamOrder();
+        this.iceCreamMemento = new IceCreamMemento();
+    }
+    
     public IceCreamLover(String name) {
         this.name = name;
         this.iceCreamOrder = new IceCreamOrder();
