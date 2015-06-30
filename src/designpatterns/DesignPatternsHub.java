@@ -5,7 +5,8 @@
  */
 package designpatterns;
 
-import designpatterns.*;
+import designpatterns.observer.ObserverPattern;
+import designpatterns.memento.MementoPattern;
 
 /**
  *
@@ -17,7 +18,8 @@ public class DesignPatternsHub {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+        MementoPattern m = new MementoPattern();
+        m.demonstrate();
     }
     
 }
