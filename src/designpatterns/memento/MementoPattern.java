@@ -13,35 +13,36 @@ import designpatterns.PatternDemonstration;
  */
 public class MementoPattern implements PatternDemonstration {
 
-    private IceCreamLover nora;
+    private IceCreamLover iceCreamLover;
     
     private IceCreamOrder one;
     private IceCreamOrder two;
     private IceCreamOrder three;
     
+    private void printOrder() {
+        System.out.println(iceCreamLover.getName() + " is ordering a...");
+        iceCreamLover.printIceCreamOrder();
+    }
+    
     @Override
     public void demonstrate() {
         initialize();
-        nora.setIceCreamOrder(one);
-        System.out.println(nora.getName() + " is ordering a...");
-        nora.printIceCreamOrder();
+        iceCreamLover.setIceCreamOrder(one);
+        this.printOrder();
         System.out.println("------ Saving the above order... ------\n");
-        nora.saveOrderToMemento();
-        nora.setIceCreamOrder(two);
-        System.out.println(nora.getName() + " is ordering a...");
-        nora.printIceCreamOrder();
-        nora.setIceCreamOrder(three);
-        System.out.println(nora.getName() + " is ordering a...");
-        nora.printIceCreamOrder();
-        System.out.println(nora.getName() + " wants her usual favorite. Restoring state...");
-        nora.restoreOrderFromMemento();
-        System.out.println(nora.getName() + " is ordering a...");
-        nora.printIceCreamOrder();
+        iceCreamLover.saveOrderToMemento();
+        iceCreamLover.setIceCreamOrder(two);
+        this.printOrder();
+        iceCreamLover.setIceCreamOrder(three);
+        this.printOrder();
+        System.out.println(iceCreamLover.getName() + " wants her usual favorite. Restoring state...");
+        iceCreamLover.restoreOrderFromMemento();
+        this.printOrder();
     }
 
     @Override
     public void initialize() {
-        nora = new IceCreamLover("Nora");
+        iceCreamLover = new IceCreamLover("Nora");
         
         one = new IceCreamOrder();
         one.setFlavor("Coconut");
@@ -60,7 +61,5 @@ public class MementoPattern implements PatternDemonstration {
         three.setIsInACone(true);
         three.setScoops(3);
         three.setToppings("Sprinkles and mochi");
-        
     }
-    
 }
