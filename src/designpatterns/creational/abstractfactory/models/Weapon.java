@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package designpatterns.creational.abstractfactory;
+package designpatterns.creational.abstractfactory.models;
 
 /**
  *
  * @author nora-valletta
  */
-public class Weapon {
-    private Material material;
+public abstract class Weapon {
+    private int sharpness = 0;
     private Gem gem;
     private Enchant enchant;
 }
