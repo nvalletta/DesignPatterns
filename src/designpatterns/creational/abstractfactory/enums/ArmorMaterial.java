@@ -3,14 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package designpatterns.creational.abstractfactory.models;
+package designpatterns.creational.abstractfactory.enums;
 
 /**
  *
  * @author nora-valletta
  */
-public abstract class Weapon {
-    private WeaponShape shape;
-    private Gem gem;
-    private Enchant enchant;
+public enum ArmorMaterial {
+    CLOTH,
+    PLATE
 }

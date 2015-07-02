@@ -5,12 +5,14 @@
  */
 package designpatterns.creational.abstractfactory.models;
 
+import designpatterns.creational.abstractfactory.enums.ArmorMaterial;
+
 /**
  *
  * @author nora-valletta
  */
 public abstract class Armor {
-    private boolean isStylish = false;
+    private ArmorMaterial material;
     private Gem gem;
     private Enchant enchant;
 }
