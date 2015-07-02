@@ -5,7 +5,6 @@
  */
 package designpatterns.creational.abstractfactory.models;
 
-import designpatterns.creational.abstractfactory.enums.HeroClass;
 
 /**
  *
@@ -13,21 +12,12 @@ import designpatterns.creational.abstractfactory.enums.HeroClass;
  */
 public final class Player {
     
-    private HeroClass heroClass;
-    private Weapon weapon;
-    private Armor armor;
+    private final Weapon weapon;
+    private final Armor armor;
     
-    private void generateEquipment() {
-        // TODO: Use the abstract factory to generate weapon and armor.
-    }
-    
-    public Player(HeroClass heroClass) {
-        this.heroClass = heroClass;
-        this.generateEquipment();
-    }
-    
-    public HeroClass getHeroClass() {
-        return this.heroClass;
+    public Player(Weapon weapon, Armor armor) {
+        this.weapon = weapon;
+        this.armor = armor;
     }
     
     public void printWeaponDetails() {

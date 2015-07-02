@@ -18,7 +18,7 @@ import designpatterns.creational.abstractfactory.models.Weapon;
  *
  * @author nora-valletta
  */
-public class MageEquipmentFactory implements AbstractEquipmentFactory {
+public final class MageEquipmentFactory implements AbstractEquipmentFactory {
 
     @Override
     public Weapon buildWeapon() {
