@@ -14,12 +14,18 @@ import java.util.Date;
 public class GroomingAppointmentBuilder {
     Date appointmentDate;
     String customerName;
-    String customerPhoneNumber;
-    String dogName;
-    String dogBreed;
-    boolean nailCleaning;
-    boolean earCleaning;
-    boolean brushOut;
-    boolean hairCut;
+    String customerPhoneNumber = "";
+    String dogName = "";
+    String dogBreed = "";
+    boolean nailCleaning = false;
+    boolean earCleaning = false;
+    boolean brushOut = false;
+    boolean hairCut = false;
+    
+    // An appointment date and customer name is required.
+    public GroomingAppointmentBuilder(Date appointmentDate, String customerName) {
+        this.appointmentDate = appointmentDate;
+        this.customerName = customerName;
+    }
     
 }
