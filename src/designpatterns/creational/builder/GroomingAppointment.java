@@ -26,14 +26,21 @@ public final class GroomingAppointment {
     private String dogName;
     private String dogBreed;
     
-    private boolean nailCleaning = false;
-    private boolean earCleaning = false;
-    private boolean brushOut = false;
-    private boolean hairCut = false;
+    private boolean nailCleaning;
+    private boolean earCleaning;
+    private boolean brushOut;
+    private boolean hairCut;
     
-    public GroomingAppointment(Date appointmentDate, String customerName) {
-        this.appointmentDate = appointmentDate;
-        this.customerName = customerName;
+    public GroomingAppointment(GroomingAppointmentBuilder builder) {
+        this.appointmentDate = builder.appointmentDate;
+        this.customerName = builder.customerName;
+        this.customerPhoneNumber = builder.customerPhoneNumber;
+        this.dogName = builder.dogName;
+        this.dogBreed = builder.dogBreed;
+        this.nailCleaning = builder.nailCleaning;
+        this.earCleaning = builder.earCleaning;
+        this.brushOut = builder.brushOut;
+        this.hairCut = builder.hairCut;
     }
 
     public Date getAppointmentDate() {
@@ -52,7 +59,10 @@ public final class GroomingAppointment {
         return customerName;
     }
 
-    public void setCustomerName(String customerName) {
+    public void setCustomerName(String customerName) throws Exception {
+        if (null == customerName || customerName.isEmpty()) {
+            throw new Exception("Invalid customer name.");
+        }
         this.customerName = customerName;
     }
 
