@@ -5,8 +5,7 @@
  */
 package designpatterns;
 
-import designpatterns.behavioral.observer.ObserverPattern;
-import designpatterns.behavioral.memento.MementoPattern;
+import designpatterns.creational.abstractfactory.AbstractFactoryPattern;
 
 /**
  *
@@ -18,8 +17,8 @@ public class DesignPatternsHub {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        MementoPattern m = new MementoPattern();
-        m.demonstrate();
+        AbstractFactoryPattern pattern = new AbstractFactoryPattern();
+        pattern.demonstrate();
     }
     
 }

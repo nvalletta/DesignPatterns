@@ -12,7 +12,7 @@ import java.util.List;
 /**
  *
  * @author nora-valletta
- */;
+ */
 public class ObserverPattern implements PatternDemonstration {
     
     private List<Human> humans;

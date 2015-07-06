@@ -21,11 +21,17 @@ public final class Player {
     }
     
     public void printWeaponDetails() {
-        // TODO: Print weapon details here.
+        System.out.println("I weild a weapon with...\n"
+                + weapon.getGem().getGemDescription()
+                + "\n"
+                + weapon.getEnchant().getEnchantDescription());
     }
     
     public void printArmorDetails() {
-        // TODO: Print armor details here.
+        System.out.println("My armor has...\n"
+                + armor.getGem().getGemDescription()
+                + "\n"
+                + armor.getEnchant().getEnchantDescription());
     }
     
 }
