@@ -5,7 +5,7 @@
  */
 package designpatterns;
 
-import designpatterns.creational.abstractfactory.AbstractFactoryPattern;
+import designpatterns.creational.builder.BuilderPattern;
 
 /**
  *
@@ -17,7 +17,7 @@ public class DesignPatternsHub {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        AbstractFactoryPattern pattern = new AbstractFactoryPattern();
+        BuilderPattern pattern = new BuilderPattern();
         pattern.demonstrate();
     }
     
