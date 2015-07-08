@@ -127,7 +127,8 @@ public final class GroomingAppointment {
         Field[] fields = GroomingAppointment.class.getDeclaredFields();
         try {
             for (Field f : fields) {
-                sb.append(f.getName()).append(": ").append(f.get(GroomingAppointment.class)).append("\n");
+                f.setAccessible(true);
+                sb.append(f.getName()).append(": ").append(f.get(this)).append("\n");
             }
         } catch (IllegalAccessException e) {
             System.out.println(e.getMessage());
