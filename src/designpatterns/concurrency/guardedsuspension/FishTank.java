@@ -14,39 +14,28 @@ import java.util.List;
  */
 public final class FishTank {
     
-    private List<GoldFish> goldfishies = new ArrayList<>();
+    private Feeder goldFishFeeder = new Feeder();
+    private GoldFish goldFish = new GoldFish();
     public static List<FoodMorsel> foodMorsels = new ArrayList<>();
     
-    public FishTank(int numberOfFish, int numberOfFoodMorsels) throws Exception {
-        if (numberOfFish <= 0 || numberOfFoodMorsels <= 0) {
-            throw new Exception("Must have a positive number of fish and morsels of food.");
+    public FishTank(int numberOfFoodMorsels) throws Exception {
+        if (numberOfFoodMorsels <= 0) {
+            throw new Exception("Must have a positive number of morsels of food.");
         }
         
-        for (int i=0; i < numberOfFish; i++) {
-            addGoldFish();
-        }
         for (int i=0; i< numberOfFoodMorsels; i++) {
             addFoodMorsel();
         }
     }
     
     public void commenceFeedingTime() {
-        //TODO: All the fishies eat all the foods (concurrently)
-        goldfishies.stream().forEach((fish) -> {
-            (new Thread(fish)).start();
-        });
-    }
-    
-    private void addGoldFish() {
-        GoldFish fish = new GoldFish();
-        goldfishies.add(fish);
+        (new Thread(goldFishFeeder)).start();
+        (new Thread(goldFish)).start();
     }
     
     private void addFoodMorsel() {
         FoodMorsel morsel = new FoodMorsel();
         foodMorsels.add(morsel);
     }
-    
-    
     
 }

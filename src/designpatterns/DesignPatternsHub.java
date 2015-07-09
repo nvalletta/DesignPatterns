@@ -5,7 +5,7 @@
  */
 package designpatterns;
 
-import designpatterns.creational.builder.BuilderPattern;
+import designpatterns.concurrency.guardedsuspension.GuardedSuspension;
 
 /**
  *
@@ -17,7 +17,7 @@ public class DesignPatternsHub {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        BuilderPattern pattern = new BuilderPattern();
+        GuardedSuspension pattern = new GuardedSuspension();
         pattern.demonstrate();
     }
     

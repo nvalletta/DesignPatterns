@@ -9,6 +9,14 @@ package designpatterns.concurrency.guardedsuspension;
  *
  * @author nora-valletta
  */
-public final class GoldFish {
+public final class GoldFish implements Runnable {
+
+    @Override
+    public void run() {
+        for (int i=0; i<10000; i++) {
+            System.out.println("Fish " + this.toString() + " eats a morsel.");
+            FishTank.foodMorsels.remove(FishTank.foodMorsels.size()-1);
+        }
+    }
     
 }
