@@ -6,31 +6,36 @@
 package designpatterns.concurrency.guardedsuspension;
 
 import designpatterns.PatternDemonstration;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
  * @author nora-valletta
  */
 public class GuardedSuspension implements PatternDemonstration {
-
-    private FishTank fishTank;
+    
+    private List<Player> players;
+    private Coach coach;
     
     @Override
     public void demonstrate() {
         initialize();
-        fishTank.commenceFeedingTime();
+        players.stream().forEach((p) -> {
+            (new Thread(p)).start();
+        });
+        coach.beACoach();
     }
 
     @Override
     public void initialize() {
-        try {
-            fishTank = new FishTank(10000);
-        } catch (Exception ex) {
-            Logger.getLogger(GuardedSuspension.class.getName()).log(Level.SEVERE, null, ex);
+        players = new ArrayList<>();
+        for (int i=0; i<10; i++) {
+            Player p = new Player();
+            players.add(p);
         }
         
+        coach = new Coach();
     }
     
 }

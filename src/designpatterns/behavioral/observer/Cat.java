@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package designpatterns.behavioral.observer;
 
 import java.util.Observable;
@@ -10,7 +6,6 @@ import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 /**
- *
  * @author nora-valletta
  */
 public class Cat extends Observable {
