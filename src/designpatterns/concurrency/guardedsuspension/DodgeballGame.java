@@ -6,6 +6,6 @@ package designpatterns.concurrency.guardedsuspension;
  */
 public class DodgeballGame {
     
-    public boolean gameOn = false;
+    public Boolean gameOn = false;
     
 }
