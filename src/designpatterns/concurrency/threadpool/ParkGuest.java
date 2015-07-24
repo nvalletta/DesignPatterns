@@ -1,9 +1,11 @@
 package designpatterns.concurrency.threadpool;
 
-/**
- *
- * @author nora-valletta
- */
-public class ParkGuest {
+
+public class ParkGuest implements Runnable {
+
+    @Override
+    public void run() {
+        System.out.println(this.toString() + " is having fun!");
+    }
     
 }

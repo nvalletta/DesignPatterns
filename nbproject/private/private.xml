@@ -3,10 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/DesignPatterns/src/designpatterns/concurrency/guardedsuspension/Coach.java</file>
-            <file>file:/D:/DesignPatterns/src/designpatterns/concurrency/guardedsuspension/DodgeballGame.java</file>
-            <file>file:/D:/DesignPatterns/src/designpatterns/concurrency/guardedsuspension/Player.java</file>
-            <file>file:/D:/DesignPatterns/src/designpatterns/concurrency/guardedsuspension/GuardedSuspension.java</file>
+            <file>file:/D:/DesignPatterns/src/designpatterns/concurrency/threadpool/ThemeParkRide.java</file>
+            <file>file:/D:/DesignPatterns/src/designpatterns/concurrency/threadpool/ParkGuest.java</file>
+            <file>file:/D:/DesignPatterns/src/designpatterns/concurrency/threadpool/ThemePark.java</file>
         </group>
     </open-files>
 </project-private>
