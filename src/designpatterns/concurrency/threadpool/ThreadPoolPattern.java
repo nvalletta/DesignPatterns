@@ -15,7 +15,8 @@ public class ThreadPoolPattern implements PatternDemonstration {
 
     @Override
     public void initialize() {
-        norasThemePark = new ThemePark(15, 10);
+        // 15 rides and 100 park guests.
+        norasThemePark = new ThemePark(15, 100);
     }
     
 }
