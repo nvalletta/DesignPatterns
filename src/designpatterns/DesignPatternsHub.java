@@ -1,7 +1,7 @@
 
 package designpatterns;
 
-import designpatterns.concurrency.guardedsuspension.GuardedSuspension;
+import designpatterns.concurrency.threadpool.ThreadPoolPattern;
 
 /**
  * @author nora-valletta
@@ -9,7 +9,7 @@ import designpatterns.concurrency.guardedsuspension.GuardedSuspension;
 public class DesignPatternsHub {
 
     public static void main(String[] args) {
-        GuardedSuspension pattern = new GuardedSuspension();
+        ThreadPoolPattern pattern = new ThreadPoolPattern();
         pattern.demonstrate();
     }
     

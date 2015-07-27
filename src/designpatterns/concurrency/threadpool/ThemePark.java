@@ -13,6 +13,10 @@ public class ThemePark {
     
     public ThemePark(int numberOfRides, int maxNumberOfOpenRides) {
         taskQueue = new ArrayBlockingQueue(maxNumberOfOpenRides);
+        // I guess this assumes that everybody wants to ride something once...
+        while (taskQueue.remainingCapacity() > 0) {
+            taskQueue.add(new ParkGuest());
+        }
         for (int i=0; i<numberOfRides; i++) {
             rides.add(new ThemeParkRide(taskQueue));
         }
